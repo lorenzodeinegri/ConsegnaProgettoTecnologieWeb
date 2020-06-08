@@ -1,0 +1,234 @@
+/* Regole generali per le pagine */
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Times New Roman", Georgia, sans-serif;
+  box-sizing: border-box;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+html,
+body {
+  font-size: 1.1em;
+  background-color: #fff;
+  color: #000;
+}
+
+a {
+  color: #000;
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+}
+
+/* Regole per il contenuto principale delle pagine */
+
+#content {
+  clear: both;
+  background-color: #fff;
+  color: #000;
+  border-radius: 20px;
+  margin: 1.3em;
+}
+
+.title {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+#content dt {
+  font-weight: bold;
+}
+
+.inlineDef{
+  margin: 1em 0 0 0.5em;
+  float: left;
+}
+
+.titleDef{
+  padding: 1.5em 0 0.5em 0;
+  font-size: 1.2em;
+  border-top: 2px solid #ccc;
+}
+
+.definition,
+.definitionOpera,
+.definitionOpere {
+  padding: 1em 0 2em 11.5em;
+}
+
+.definitionOpere{
+  padding-left: 18em;
+}
+
+.clause {
+  clear: right;
+  padding: 0 1em;
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+
+.filter {
+  border: 0;
+  background: none;
+  font-size: 1em;
+  margin: 0 2%;
+}
+
+.paragraph {
+  font-size: 1em;
+}
+
+.list,
+.error,
+.success,
+.separation,
+.buttonPosition{
+  list-style-type: none;
+}
+
+.list li {
+  margin-bottom: 1em;
+}
+
+.separation li {
+  padding-top: 0.2em;
+  padding-bottom: 1em;
+  border-top: 2px solid #ccc;
+}
+
+.fieldset,
+.fieldsetOpEv,
+.hideFieldset {
+  padding: 1em;
+  margin-bottom: 1em;
+  text-align: justify;
+  border-radius: 0.25em;
+}
+
+.hideFieldset{
+  border: none;
+  margin-bottom: 0;
+}
+
+.fieldsetOpEv{
+  text-align: center;
+  padding: 0 0.6em 0.2em 0;
+}
+
+.hideLegend {
+  display: none;
+}
+
+.labelPosition{
+  display: block;
+}
+
+.formElement,.loginElement,.dateElement, .descriptionArea {
+  display: block;
+  width: 80%;
+  height: 2.6em;
+  font-size: 1em;
+  font-weight: 400;
+  background-clip: padding-box;
+  border: 1px solid #aaa;
+  border-radius: 0.25em;
+  padding: 0.375em 0.75em;
+  resize: vertical;
+  margin: 0.3em 1.5em 1em 0;
+}
+
+.loginElement {
+  width: 65%;
+  display: inline-block;
+}
+
+.dateElement{
+  width: 9.2em;
+}
+
+.descriptionArea{
+  height: 10em;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.buttonPosition {
+  text-align: center;
+  border-style: none;
+  margin-top: 0.5em;
+}
+
+.buttonPosition a {
+  display: inline-block;
+}
+
+#reviewButton {
+  float: right;
+  font-size: 1em;
+  width: 11em;
+}
+
+
+.significantImage {
+  text-align: center;
+  height: 25em;
+  width: 80%;
+  display:block;
+  margin:1em auto;
+}
+
+
+.previewOpera{
+  height: 10em;
+  width: 10em;
+  float:left;
+  margin: 0;
+}
+
+
+.backgroundImage {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  white-space: nowrap;
+  overflow: hidden;
+  background-size: contain;
+}
+
+
+#search,
+#searchBox,
+#searchText,
+#hamburgerMenu,
+#homepageButton,
+#operationsList,
+#loginButton,
+#register,
+#loginMenu a,
+#breadcrumbs,
+#menu,
+#imageUpload,
+#labelImageUpload,
+#imageError404,
+#clause,
+#reviewAsk,
+#map,
+#buttonBackUp,
+#footer,
+#logoImage,
+#buttonNext,
+#buttonBack,
+.skipInformation,
+.button,
+.userButton,
+.formFieldError,
+.error,
+.success,
+.hideLabel,
+.disable
+{
+  display: none;
+}

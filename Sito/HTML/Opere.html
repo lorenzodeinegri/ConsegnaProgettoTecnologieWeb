@@ -1,0 +1,137 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+ARIA 1.0//EN" "http://www.w3.org/WAI/ARIA/schemata/xhtml-aria-1.dtd">
+
+<html xml:lang="it" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+        <title>Opere | TecArt</title>
+
+        <meta name="language" content="italian it"/>
+        <meta name="viewport" content="width=device-width" />
+        <meta name="title" content="Opere | TecArt"/>
+        <meta name="description" content="Elenco di opere presenti nel sito web"/>
+        <meta name="keywords" content="opere, dipinto, scultura, autore, arte, museo"/>
+        <meta name="author" content="Fiammetta Cannavò, Lorenzo Dei Negri, Federico Perin, Massimo Toffoletto"/>
+
+        <link href="../CSS/Style.css" media="screen" rel="stylesheet" type="text/css"/>
+        <link href="../CSS/Print.css" media="print" rel="stylesheet" type="text/css"/>
+        <link rel="icon" href="../Images/favicon.ico"/>
+
+        <script src="../JavaScript/script.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <div id="header" role="banner">
+            <h1 id="logoImage" class="backgroundImage" title="Immagine del logo TecArt" role="img" aria-label="Immagine del logo TecArt"> <span xml:lang="en">TecArt</span> </h1>
+
+            <span id="hamburgerMenu" class="backgroundImage" title="Menu ad hamburger, clicca sopra per aprire il menu" role="img" aria-label="Menu ad hamburger, clicca sopra per aprire il menu" tabindex="0" onclick="touch();" onkeydown="enterTouch(event);">
+                        Menu ad <span xml:lang="en">hamburger</span>
+                    </span>
+
+            <span id='loginMenuPlaceholder'/>
+
+            <form id="search" name="search" action="Ricerca.php" method="post" title="Form per la ricerca tra i contenuti del sito" role="search" aria-label="Form per la ricerca tra i contenuti del sito" onsubmit="return searchFormValidation();">
+                <fieldset id="searchBox">
+                    <legend class="hideLegend">Ricerca</legend>
+                    
+					<label class="hideLabel" for="filterSearch">filtro per la ricerca</label>
+                    <select id="filterSearch" name="filter" title="Seleziona il filtro per la ricerca" aria-label="Seleziona il filtro per la ricerca">
+                        <option selected="selected" value="Opera">Opera</option>
+                        <option value="Evento">Evento</option>
+                    </select>
+
+                    <label class="hideLabel" for="searchText">Cerca nel sito</label>
+                    <input id="searchText" name="search" type="text" title="Casella di ricerca" aria-label="Casella di ricerca"/>
+                    <input id="buttonSubmit" name="submit" type="submit" value="Cerca" title="Pulsante per la ricerca" aria-label="Pulsante per la ricerca"/>
+                </fieldset>
+            </form>
+        </div>
+
+        <div id="breadcrumbs" title="Breadcrumbs" aria-label="Breadcrumbs">
+
+            <p>
+                <a class="skipInformation" href="#menu" title="Vai al menu" aria-label="Vai al menu">Vai al menu</a>
+            </p>
+
+            <p>
+                Ti trovi in:
+                <a href="HomePage.php" title="Vai alla pagina homepage del museo" aria-label="Vai alla pagina homepage del museo" xml:lang="en">Home</a>
+                &gt;&gt;
+                <strong>Opere</strong>
+            </p>
+        </div>
+
+        <div id="menu" role="navigation" title="Menu per la navigazione nel sito" aria-label="Menu per la navigazione nel sito">
+            <ul>
+                <li>
+                    <a id="skipMenu" class="skipInformation" href="#content" title="Vai al contenuto" aria-label="Vai al contenuto">Vai al contenuto</a>
+                </li>
+
+                <li>
+                    <a href="HomePage.php" title="Vai alla pagina homepage del museo" aria-label="Vai alla pagina homepage del museo" xml:lang="en">Home</a>
+                </li>
+
+                <li>
+                    <strong>Opere</strong>
+                </li>
+
+                <li>
+                    <a href="Eventi.php" title="Vai alla pagina degli eventi" aria-label="Vai alla pagina degli eventi">Eventi</a>
+                </li>
+
+                <li>
+                    <a href="CosaDiconoDiNoi.php" title="Vai alla pagina delle recensioni" aria-label="Vai alla pagina delle recensioni">Cosa
+                        dicono di noi</a>
+                </li>
+
+                <li>
+                    <a href="Contatti.php" title="Vai alla pagina dei contatti" aria-label="Vai alla pagina dei contatti">Contatti</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="content" role="main">
+            <h1 class="title">Opere</h1>
+            <form id="operaFilter" action="" method="get">
+                <fieldset class="fieldsetOpEv">
+                    <legend>Filtro per le opere</legend>
+
+                    <label id="labelFilterType" for="filterType">Visualizza</label>
+                    <select name="filterType" id="filterType" class="filter" title="Filtro per lo stile dell'opera" aria-label="Filtro per lo stile dell'opera">
+                        <option value="TutteLeOpere"<span id='filterOptionsWholePlaceholder'/>> Tutte le opere </option>
+                        <option value="Dipinto"<span id='filterOptionPaintingsPlaceholder'/>> Dipinti </option>
+                        <option value="Scultura"<span id='filterOptionSculpturesPlaceholder'/>> Sculture </option>
+                    </select>
+
+                    <input id="buttonFilter" class="button" value="Filtra" type="submit" title="Filtra per stile dell'opera" aria-label="Filtra per stile dell'opera"/>
+                </fieldset>
+            </form>
+
+            <span id='artworkNumberFoundPlaceholder'/>
+
+            <span id='skipArtworksPlaceholder'/>
+
+            <span id='artworkListPlaceholder'/>
+
+            <span id='navigationArtworksButtonsPlaceholder'/>
+
+            <a id="buttonBackUp" class="backgroundImage" href="#header" title="Torna su" role="button" aria-label="Torna su">
+                Torna su
+            </a>
+        </div>
+
+        <div title="footer" aria-label="footer" id="footer">
+            <p>
+                Progetto per il corso di Tecnologie <span xml:lang="en">Web</span>, Anno Accademico 2019/2020
+            </p>
+
+            <p>
+                Studenti: Fiammetta Cannavò, Lorenzo Dei Negri, Federico Perin, Massimo Toffoletto
+            </p>
+
+            <img alt="Simbolo di validazione XHTML" src="../Images/valid-xhtml10.png"/>
+            <img alt="Simbolo di validazione CSS" src="../Images/vcss-blue.gif"/>
+        </div>
+    </body>
+</html>

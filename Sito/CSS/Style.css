@@ -1,0 +1,563 @@
+/* Layout comune a tutti i tipi di dispositivo */
+
+/* Regole per i tag delle pagine */
+
+/* Rende la pagina vuota e imposta un iterlinea di 1.5 per l'accessibilità della pagina */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  line-height: 1.5em;
+  max-width: 1024px;
+  word-wrap: break-word;
+}
+
+/* Impostazione colore di sfondo e larghezza minima della pagina */
+html,
+body {
+  margin: auto;
+  min-width: 380px;
+  background-color: #cccccc;
+}
+
+a {
+  color: #00f;
+}
+
+a:active {
+  color: #900;
+}
+
+a:visited {
+  color: #636;
+}
+
+#uploadedImageIE {
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale);
+  color: rgba(0, 0, 0, 0);
+}
+
+.hideContent {
+  display: none;
+}
+
+/* Regole per gli header delle pagine */
+
+/* Colore e ombreggiatura dell'header */
+#header {
+  background-color: #333;
+  padding: 0.5em;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1), 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Regole per le barre di ricerca delle pagine */
+#searchBox {
+  border: 1px solid #000;
+  background-color: #eeeeee;
+  border-radius: 20px;
+  clear: both;
+  margin: auto;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#searchText {
+  border: 0;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  font-size: 1.4em;
+  width: 50%;
+}
+
+#buttonSubmit {
+  cursor: pointer;
+  border: 0;
+  font-size: 1.3em;
+  margin-left: 3%;
+  background: none;
+}
+
+/* Regole per le immagini delle pagine */
+
+/* Inserimento di un'immagine con la tecnica image replacement */
+.backgroundImage {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  white-space: nowrap;
+  overflow: hidden;
+  background-size: contain;
+}
+
+/* Logo accessibile */
+#logoImage {
+  float: left;
+  background-image: url('../Images/logo.png');
+  color:white;
+  text-indent: 100%;
+  height: 3.1em;
+  width: 39%;
+  margin-top: 0.3em;
+}
+
+#imageError404 {
+  background-image: url('../Images/PortraitsCorridor.png');
+  text-indent: 100%;
+  width: 100%;
+  height: 10em;
+}
+
+.significantImage,
+.previewOpera {
+  text-align: center;
+  height: 25em;
+  width: 60%;
+  display:block;
+  margin:1em auto;
+}
+
+.previewOpera{
+  height: 10em;
+  width: 12em;
+}
+
+/* Regole per i breadcrumbs delle pagine */
+#breadcrumbs {
+  background-color: #eee;
+  border-radius: 20px;
+  color: #000;
+  font-size: 1.2em;
+  margin: 0.5em 0 0.7em 0;
+  padding: 0.5em;
+}
+
+/* Regole per i menu delle pagine */
+
+.userButton a, .skipDown {
+  display: inline-block;
+}
+
+#loginMenu a {
+  float: right;
+  width: 27%;
+}
+
+#loginButton{
+  margin-top: 2em;
+}
+
+/* Icona per il menu utente */
+#hamburgerMenu {
+  float: right;
+  background-image: url('../Images/HamburgerMenu1.png');
+  text-indent: 100%;
+  height: 6em;
+  width: 20%;
+  margin: 0.7em 2% 0.5em 6%;
+}
+
+#hamburgerMenu:active {
+  border-style: inset;
+}
+
+#menu {
+  display: none;
+  background-color: #eee;
+  border-radius: 20px;
+  white-space: nowrap;
+  margin-bottom: 1em;
+}
+
+#menu.show {
+  display: block;
+  font-size: 1.5em;
+  margin:0;
+}
+
+/* Toglie i pallini dal menu */
+#menu ul {
+  text-align: center;
+  padding: 0.5em 0;
+}
+
+#menu li:hover {
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+/* Regole per i contenuti delle pagine */
+#content {
+  background-color: #fff;
+  color: #000;
+  border-radius: 20px;
+  margin: 1em 0;
+  padding: 0.5em 1.5em;
+}
+
+#skipMenu:focus {
+  display: block;
+  left: 1em;
+  top: 7.8em;
+}
+
+#content dt {
+ font-weight: bold;
+}
+
+#buttonFilter {
+  width: 4em;
+}
+
+.inlineDef{
+  margin: 1em 0 0 0.5em;
+  float: left;
+}
+
+.titleDef{
+  padding: 1.5em 0 0.5em 0;
+  font-size: 1.2em;
+  border-top: 2px solid #ccc;
+}
+
+.definition,
+.definitionOpera,
+.definitionOpere {
+  padding: 1em 0 1em 11.5em;
+}
+
+.definitionOpera{
+  padding-left: 6.5em;
+}
+
+#filterSearch,
+.filter{
+  margin: 0 2%;
+  background: none;
+  font-size: 1em;
+}
+
+#filterSearch{
+  border: 0;
+  margin: 0 3% 0 0;
+  font-size: 1.3em;
+}
+
+.userButton {
+  border-style: none;
+}
+
+/* Nascondere il salta contenuto */
+.skipInformation {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Visualizzo salta contenuto attivato dal tab */
+.skipInformation:focus {
+  position: static;
+}
+
+/* Template di un lista */
+.list,
+.error,
+.success,
+.separation,
+.userButton,
+#menu ul,
+.buttonPosition
+{
+  list-style-type: none;
+
+}
+
+.list li {
+  margin-bottom: 0.5em;
+}
+
+.separation li{
+  border-top: 2px solid #ccc;
+}
+
+.clause {
+  clear: right;
+  padding: 0 1em;
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+
+#map {
+  display: block;
+  height: 12em;
+  width: 80%;
+  margin: 0.5em 10%;
+}
+
+/* Toglie il bordo */
+.fieldset,
+.fieldsetOpEv,
+.hideFieldset {
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 0.25em;
+}
+
+.hideFieldset,
+.hideRight {
+  border: none;
+  margin-bottom: 0;
+}
+
+.hideRight{
+  text-align: right;
+  margin-bottom: 1em;
+}
+
+.fieldsetOpEv{
+  text-align: center;
+  padding: 0 0.6em 0.2em 0;
+}
+
+.hideLabel,
+.hideLegend {
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+}
+
+.labelPosition, .clause{
+  display: block;
+}
+
+.formElement,
+.loginElement,
+.dateElement,
+.descriptionArea {
+  display: block;
+  width: 80%;
+  height: 2.6em;
+  font-size: 1em;
+  font-weight: 400;
+  background-clip: padding-box;
+  border: 1px solid #aaa;
+  border-radius: 0.25em;
+  padding: 0.375em 0.75em;
+  resize: vertical;
+  margin: 0.3em 0 1em 0;
+}
+
+.descriptionArea{
+  height: 10em;
+  width: 100%;
+}
+
+.loginElement {
+  width: 65%;
+  display: inline-block;
+}
+
+.dateElement{
+  width: 9.2em;
+}
+
+#reviewButton {
+  float: right;
+  width: 11em;
+}
+
+#buttonBackUp {
+  position: fixed;
+  background-image: url("../Images/TornaSu.png");
+  bottom: 3em;
+  right: 6em;
+  color: transparent;
+  opacity: 0.7;
+  height: 3em;
+}
+
+.button {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #ccc;
+  padding: 0.5em 0;
+  margin: 0.2em;
+  width: 8em;
+  border: 1px solid #000;
+  font-size: 1.1em;
+}
+
+.button:hover, .button:focus {
+  box-shadow: 0 0 2px 0 #333, 0 2px 3px #333;
+  background: white;
+}
+
+#buttonSubmit:hover{
+  background: white;
+}
+
+.button:active,
+#buttonSubmit:active {
+  box-shadow: none;
+  color: #000;
+  border: 2px inset #000000;
+}
+
+#buttonSubmit:active{
+  font-size: 1.2em
+}
+
+.button:visited {
+  color: #000;
+}
+
+.userOperationButton {
+  width: 100%;
+}
+
+/* Posizionamento al centro del contenuto per la navigazione */
+.buttonPosition {
+  text-align: center;
+  border-style: none;
+  margin-top: 0.5em;
+}
+
+.title {
+  text-align: center;
+  font-size: 2em;
+}
+
+.subtitle {
+  margin: 1em 0 0.5em 0;
+}
+
+.paragraph {
+  font-size: 1.1em;
+  padding: 0.5em 0;
+}
+
+.formFieldError,
+.error,
+.success{
+  display: block;
+  font-weight: bold;
+  color: #9F0000;
+}
+.error,.success{
+  text-align: center;
+}
+.success{
+  color:#006600;
+}
+
+#footer {
+  clear: both;
+  border-top: 1px solid #333;
+  background-color: #333;
+  color: #fff;
+  font-style: italic;
+  font-weight: bold;
+  font-size: small;
+  text-align: center;
+  padding: 0.5em;
+}
+
+/* Layout per tablet */
+
+@media screen and (min-width: 700px){
+  /* Regole per le barre di ricerca delle pagine */
+
+  #searchBox{
+    width: 30em;
+  }
+
+  /* Regole per le immagini delle pagine */
+  #logoImage {
+    height: 3.5em;
+    width: 7.2em;
+    margin:0 0 0.2em 0;
+  }
+
+  #imageError404 {
+    height: 20em;
+  }
+
+  /* Regole per i menu delle pagine */
+  #hamburgerMenu {
+    display: none;
+  }
+
+  #menu {
+    display: block;
+  }
+
+  #menu.show{
+    font-size: 1em;
+  }
+
+  #menu li {
+    font-size: 1.3em;
+    display: inline-block;
+    margin-left: 2%;
+  }
+
+  #loginMenu a {
+    width: 8em;
+    clear: right;
+  }
+
+  .formElement{
+    width: 20em;
+  }
+
+  .definitionOpere{
+    padding-left: 18em;
+  }
+
+  .significantImage {
+    width: 25em;
+  }
+
+  .previewOpera{
+    height: 10em;
+    width: 10em;
+    float:left;
+    margin: 0;
+  }
+}
+
+/* Layout per desktop */
+
+@media screen and (min-width: 830px) {
+  /* Regole per gli header delle pagine */
+  #header {
+    height: 11.2em;
+  }
+
+  /* Regole per le barre di ricerca delle pagine */
+
+  #searchBox {
+   float: right;
+  }
+
+  #menu {
+    float: left;
+    width: 12.5em;
+    margin-top: 0.1em;
+  }
+
+  #menu li {
+    display: block;
+    margin:auto;
+  }
+
+  /* Regole per i contenuti delle pagine */
+  #content {
+    margin-left: 13.5em;
+    min-height: 10.6em;
+  }
+}
